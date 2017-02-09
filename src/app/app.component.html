@@ -1,8 +1,12 @@
 <div class="center">
   <h1>{{title}}</h1>
-  <nav>
-    <a routerLink="/heroes">Heroes</a>
-    <a routerLink="/dashboard">Dashboard</a>
-  </nav>
+  <div class="center">
+    <nav>
+      <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    </nav>
+  </div>
+</div>
+<div class="center">
   <router-outlet></router-outlet>
 </div>

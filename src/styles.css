@@ -3,8 +3,3 @@ h1, h2, h3, body {
   font-family: Calibri;
   font-weight: lighter;
 }
-
-.center {
-  margin: auto;
-  display: table;
-}
