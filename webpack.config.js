@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const TsConfigPathsPlugin = require('awesome-typescript-loader');
+const AoTPlugin = require('@ngtools/webpack').AotPlugin;
 
 module.exports = {
   context: path.resolve(__dirname, './src'),
@@ -22,5 +22,11 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"]
-  }
+  },
+  plugins: [
+    new AoTPlugin({
+      tsConfigPath: path.join(process.cwd(), 'src/tsconfig.json'),
+      entryModule: path.join(process.cwd(), 'src/app/app.module.ts#AppModule')
+    })
+  ]
 };
