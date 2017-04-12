@@ -1,9 +1,9 @@
-import {Component, OnInit, Input} from "@angular/core";
-import {Location} from "@angular/common";
-import {HeroService} from "./hero.service";
-import {ActivatedRoute, Params} from "@angular/router";
-import "rxjs/add/operator/switchMap";
-import {Hero} from "./hero";
+import {Component, OnInit, Input} from '@angular/core';
+import {Location} from '@angular/common';
+import {HeroService} from './hero.service';
+import {ActivatedRoute, Params} from '@angular/router';
+import 'rxjs/add/operator/switchMap';
+import {Hero} from './hero';
 
 @Component({
   moduleId: module.id,
