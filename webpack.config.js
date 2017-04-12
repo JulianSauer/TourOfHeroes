@@ -13,15 +13,13 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        test: /\.tsx?$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/
-      }
+      { test: /\.tsx?$/, loader: 'ts-loader', exclude: /node_modules/ },
+      { test: /\.html$/, loader: 'html-loader', exclude: /node_modules/ },
+      { test: /\.css$/, loader: ['style-loader', 'css-loader'], exclude: /node_modules/ }
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: ['.tsx', '.ts', '.html', '.css', '.js']
   },
   plugins: [
     new AoTPlugin({
