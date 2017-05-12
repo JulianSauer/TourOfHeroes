@@ -16,3 +16,4 @@ test_script:
   - node --version
   - npm --version
   - ng build --prod
+  - ng test

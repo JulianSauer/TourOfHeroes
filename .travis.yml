@@ -14,6 +14,7 @@ before_script:
 
 script:
   - ng build --prod
+  - ng test
 
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
