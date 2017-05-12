@@ -2,7 +2,7 @@
 // Generated on Tue May 09 2017 16:54:08 GMT+0200
 
 module.exports = function (config) {
-  config.set({
+  var configuration = {
     basePath: '',
     frameworks: ['jasmine', '@angular/cli'],
     plugins: [
@@ -39,6 +39,17 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
+    customLaunchers: {
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
     singleRun: true
-  })
+  };
+  if (process.env.TRAVIS) {
+    configuration.browsers = ['Chrome_travis_ci'];
+    configuration.singleRun = true;
+  }
+  config.set(configuration);
 };
